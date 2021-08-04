@@ -131,7 +131,7 @@ public void OnClientDisconnect(int client)
 
 public Action Timer_Interval(Handle timer)
 {
-    for (int i = i; i <= MaxClients; i++) if (g_Queue[i] != null && g_Timer[i] == null && g_Queue[i].Length > 0)
+    for (int i = 1; i <= MaxClients; i++) if (g_Queue[i] != null && g_Timer[i] == null && g_Queue[i].Length > 0)
     {
         PickQueue(i);
     }
@@ -199,7 +199,7 @@ public Action Timer_StopHtml(Handle timer, int client)
 
 public void Event_RoundStart(Event e, const char[] n, bool b)
 {
-    for (int i = i; i <= MaxClients; i++)
+    for (int i = 1; i <= MaxClients; i++)
     {
         StopTimer(g_Timer[i]);
     }
